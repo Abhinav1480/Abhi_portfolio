@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhinav — Frontend Developer &amp; AI Builder</title>
+<meta name="description" content="Portfolio of Abhinav, a Computer Science Engineering student building interactive web experiences, AI-powered applications and modern digital products.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.1/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- ══════════════ BOOT LOADER ══════════════ -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-mark">
+      <span class="loader-square"></span>
+      <span class="loader-id">AX-01</span>
+    </div>
+    <div class="loader-bar"><div class="loader-bar-fill" id="loader-fill"></div></div>
+    <div class="loader-status">
+      <span id="loader-text">INITIALIZING SUBSTRATE</span>
+      <span id="loader-pct">00</span>
+    </div>
+  </div>
+  <div class="loader-footer">
+    <span>PCB REV A · LOT 2026</span>
+    <span>5nm · SN 0001847</span>
+  </div>
+</div>
+
+<!-- ══════════════ WEBGL WORLD ══════════════ -->
+<canvas id="world" aria-hidden="true"></canvas>
+<div id="webgl-fallback" hidden>
+  <p>This experience requires WebGL. Please use a modern browser with hardware acceleration enabled.</p>
+</div>
+
+<!-- Readability vignette behind the content column -->
+<div id="safe-zone" aria-hidden="true"></div>
+
+<!-- ══════════════ FIXED HUD ══════════════ -->
+<header id="hud-top">
+  <a class="brand" href="#hero" aria-label="Abhinav — home">
+    <span class="brand-die" aria-hidden="true"></span>
+    <span class="brand-name">ABHINAV</span>
+    <span class="brand-rev">REV&nbsp;A</span>
+  </a>
+  <nav id="nav" aria-label="Primary">
+    <a href="#hero"       data-section="0" class="active">Home</a>
+    <a href="#about"      data-section="1">About</a>
+    <a href="#skills"     data-section="2">Skills</a>
+    <a href="#projects"   data-section="3">Projects</a>
+    <a href="#contact"    data-section="6">Contact</a>
+  </nav>
+  <a class="hud-cta" href="#contact">Get&nbsp;In&nbsp;Touch</a>
+</header>
+
+<aside id="hud-rail" aria-hidden="true">
+  <div class="rail-line"><div class="rail-progress" id="rail-progress"></div></div>
+  <div class="rail-labels">
+    <span data-section="0" class="active">01</span>
+    <span data-section="1">02</span>
+    <span data-section="2">03</span>
+    <span data-section="3">04</span>
+    <span data-section="4">05</span>
+    <span data-section="5">06</span>
+    <span data-section="6">07</span>
+  </div>
+</aside>
+
+<aside id="hud-telemetry" aria-hidden="true">
+  <span><em>CAM</em> <b id="tl-cam">SECTOR 0.00</b></span>
+  <span><em>PWR</em> <b id="tl-pwr">0.84 V</b></span>
+  <span><em>THM</em> <b id="tl-thm">41.2°C</b></span>
+  <span><em>BUS</em> <b id="tl-bus">STABLE</b></span>
+</aside>
+
+<div id="scroll-hint" aria-hidden="true">
+  <span class="hint-label">Scroll to explore</span>
+  <span class="hint-line"></span>
+</div>
+
+<!-- ══════════════ CONTENT ══════════════ -->
+<main id="content">
+
+  <!-- ── 01 · HERO — above the processor ── -->
+  <section id="hero" class="panel-section" data-index="0">
+    <div class="panel hero-panel reveal">
+      <p class="eyebrow"><span class="tick"></span>ABHINAV · FRONTEND DEVELOPER · AI BUILDER · VIBE CODER</p>
+      <h1 class="hero-title">
+        BUILDING DIGITAL<br>
+        EXPERIENCES THAT<br>
+        <em>FEEL DIFFERENT.</em>
+      </h1>
+      <p class="lede">
+        Computer Science Engineering student building interactive web experiences,
+        AI-powered applications and modern digital products.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#projects">EXPLORE PROJECTS</a>
+        <a class="btn btn-ghost" href="https://github.com/Abhinav1480" target="_blank" rel="noopener">GITHUB</a>
+      </div>
+      <ul class="hero-meta" aria-label="Summary">
+        <li><b>03</b><span>FEATURED PROJECTS</span></li>
+        <li><b>CSE</b><span>B.TECH STUDENT</span></li>
+        <li><b>2028</b><span>EXPECTED GRADUATION</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── 02 · ABOUT — memory array ── -->
+  <section id="about" class="panel-section" data-index="1">
+    <div class="panel reveal">
+      <p class="eyebrow"><span class="tick"></span>02 · ABOUT — MEMORY ARRAY</p>
+      <h2>FRONTEND DEVELOPER,<br>CURIOUS BY DEFAULT.</h2>
+      <p class="body-copy">
+        I’m a Computer Science Engineering student focused on building modern
+        web experiences, AI-powered applications and interactive digital products.
+      </p>
+      <p class="body-copy">
+        I enjoy experimenting with frontend technologies, 3D web experiences
+        and AI development tools to turn ideas into functional products.
+      </p>
+      <div class="spec-grid" aria-label="Profile specifications">
+        <div class="spec"><em>LOCATION</em><b>Hyderabad, India</b></div>
+        <div class="spec"><em>DEGREE</em><b>B.Tech CSE — VJIT</b></div>
+        <div class="spec"><em>GRADUATION</em><b class="ok">Expected 2028</b></div>
+        <div class="spec"><em>STATUS</em><b>Available for Opportunities</b></div>
+      </div>
+      <div class="about-interests">
+        <h4>PRIMARY INTERESTS</h4>
+        <ul class="tag-row">
+          <li>Frontend Engineering</li>
+          <li>AI Applications</li>
+          <li>Interactive Web Experiences</li>
+          <li>3D Web Development</li>
+          <li>Modern UI/UX</li>
+          <li>Web Application Development</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 03 · SKILLS — signal routing ── -->
+  <section id="skills" class="panel-section" data-index="2">
+    <div class="panel wide reveal">
+      <p class="eyebrow"><span class="tick"></span>03 · SKILLS — SIGNAL ROUTING</p>
+      <h2>MY TECHNOLOGY ECOSYSTEM.</h2>
+      <div class="skill-grid">
+        <article class="skill-card" data-bus="BUS-A0">
+          <header><span class="skill-ref">U-201</span><h3>Core Frontend</h3></header>
+          <p>HTML · CSS · JavaScript · TypeScript · React.js · Next.js · Tailwind CSS</p>
+          <footer><span class="lane"></span><em>BUILD / INTERFACES</em></footer>
+        </article>
+        <article class="skill-card" data-bus="BUS-A1">
+          <header><span class="skill-ref">U-202</span><h3>3D &amp; Interactive</h3></header>
+          <p>Three.js · React Three Fiber</p>
+          <footer><span class="lane"></span><em>RENDER / WORLDS</em></footer>
+        </article>
+        <article class="skill-card" data-bus="BUS-B0">
+          <header><span class="skill-ref">U-203</span><h3>Backend</h3></header>
+          <p>Node.js · Express.js</p>
+          <footer><span class="lane"></span><em>SERVE / APIS</em></footer>
+        </article>
+        <article class="skill-card" data-bus="BUS-B1">
+          <header><span class="skill-ref">U-204</span><h3>Database / Services</h3></header>
+          <p>Firebase · MongoDB · Mongoose</p>
+          <footer><span class="lane"></span><em>STORE / DATA</em></footer>
+        </article>
+        <article class="skill-card" data-bus="BUS-C0">
+          <header><span class="skill-ref">U-205</span><h3>Development</h3></header>
+          <p>Git · GitHub · REST APIs · Vercel</p>
+          <footer><span class="lane"></span><em>SHIP / DEPLOY</em></footer>
+        </article>
+        <article class="skill-card" data-bus="BUS-C1">
+          <header><span class="skill-ref">U-206</span><h3>Integrations</h3></header>
+          <p>Razorpay Integration · AI API Integration</p>
+          <footer><span class="lane"></span><em>CONNECT / SERVICES</em></footer>
+        </article>
+        <article class="skill-card" style="grid-column: 1 / -1;" data-bus="BUS-C2">
+          <header><span class="skill-ref">U-207</span><h3>Tools &amp; Experimentation</h3></header>
+          <p>Figma · Canva · Claude · Gemini API · Replit · Lovable · Spline · Mixamo · ReadyPlayerMe · LangChain · LangGraph</p>
+          <footer><span class="lane"></span><em>EXPERIMENT / AI &amp; DESIGN</em></footer>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 04 · PROJECT 01 — STOCKPILOT ── -->
+  <section id="projects" class="panel-section project-chapter" data-index="3">
+    <div class="panel wide reveal">
+      <p class="eyebrow"><span class="tick"></span>04 · PROJECT 01 — EXPANSION MODULE</p>
+      <h2>01 / STOCKPILOT</h2>
+      <p class="project-type-label">Stock / Financial Application</p>
+      <p class="body-copy">
+        A stock and financial application built to explore real-time data handling,
+        financial interfaces, and modern web application architecture.
+      </p>
+      
+      <div class="project-preview-frame">
+        <div class="preview-header">
+          <div class="preview-dots">
+            <span class="preview-dot red"></span>
+            <span class="preview-dot yellow"></span>
+            <span class="preview-dot green"></span>
+          </div>
+          <span class="preview-url">github.com/Abhinav1480/stock-pilot</span>
+        </div>
+        <div class="preview-body">
+          <div class="preview-feature-grid">
+            <div class="preview-feature-card">
+              <em>INTERFACE</em>
+              <span>Financial Data Dashboards</span>
+            </div>
+            <div class="preview-feature-card">
+              <em>DATA</em>
+              <span>Real-time Market Insights</span>
+            </div>
+            <div class="preview-feature-card">
+              <em>ARCHITECTURE</em>
+              <span>Modern Web App Structure</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="tag-row" style="margin-top: 1.2rem;">
+        <li>React</li><li>JavaScript</li><li>Financial Data</li><li>REST APIs</li><li>Web App</li>
+      </ul>
+      <div class="cta-row project-ctas">
+        <a class="btn btn-primary" href="https://github.com/Abhinav1480/stock-pilot" target="_blank" rel="noopener">VIEW GITHUB →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 05 · PROJECT 02 — EXAM OS ── -->
+  <section id="project-examos" class="panel-section project-chapter" data-index="4">
+    <div class="panel wide reveal">
+      <p class="eyebrow"><span class="tick"></span>05 · PROJECT 02 — EXPANSION MODULE</p>
+      <h2>02 / EXAM OS</h2>
+      <p class="project-type-label">Student Productivity / Study Platform</p>
+      <p class="body-copy">
+        A comprehensive student productivity platform designed to streamline academic workflows, resource management, and daily study organization.
+      </p>
+      
+      <div class="project-preview-frame">
+        <div class="preview-header">
+          <div class="preview-dots">
+            <span class="preview-dot red"></span>
+            <span class="preview-dot yellow"></span>
+            <span class="preview-dot green"></span>
+          </div>
+          <span class="preview-url">exam-os-seven.vercel.app</span>
+        </div>
+        <div class="preview-body">
+          <div class="preview-feature-grid">
+            <div class="preview-feature-card">
+              <em>RESOURCES</em>
+              <span>PDF &amp; Resource Management</span>
+            </div>
+            <div class="preview-feature-card">
+              <em>VIEWER</em>
+              <span>Built-in Document Viewing</span>
+            </div>
+            <div class="preview-feature-card">
+              <em>NOTES</em>
+              <span>Study Notes &amp; Organization</span>
+            </div>
+            <div class="preview-feature-card">
+              <em>PLANNING</em>
+              <span>Timetable &amp; Weekly Planning</span>
+            </div>
+            <div class="preview-feature-card">
+              <em>FOCUS</em>
+              <span>Pomodoro Focus Timer</span>
+            </div>
+            <div class="preview-feature-card">
+              <em>DASHBOARD</em>
+              <span>Subject Study Dashboard</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="tag-row" style="margin-top: 1.2rem;">
+        <li>Next.js</li><li>React</li><li>Firebase</li><li>Productivity</li><li>Study Tools</li>
+      </ul>
+      <div class="cta-row project-ctas">
+        <a class="btn btn-primary" href="https://exam-os-seven.vercel.app/" target="_blank" rel="noopener">LIVE DEMO →</a>
+        <a class="btn btn-ghost" href="https://github.com/Abhinav1480/ExamOS" target="_blank" rel="noopener">VIEW GITHUB</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 06 · PROJECT 03 — GYM SALAAR ── -->
+  <section id="project-gymsalaar" class="panel-section project-chapter" data-index="5">
+    <div class="panel wide reveal">
+      <p class="eyebrow"><span class="tick"></span>06 · PROJECT 03 — EXPANSION MODULE</p>
+      <h2>03 / GYM SALAAR</h2>
+      <p class="project-type-label">Gym / Fitness Website</p>
+      <p class="body-copy">
+        A gym and fitness website built with modern design principles,
+        showcasing responsive layouts, dynamic styling, and an engaging
+        user experience for fitness enthusiasts.
+      </p>
+
+      <div class="project-preview-frame">
+        <div class="preview-header">
+          <div class="preview-dots">
+            <span class="preview-dot red"></span>
+            <span class="preview-dot yellow"></span>
+            <span class="preview-dot green"></span>
+          </div>
+          <span class="preview-url">abhinav1480.github.io/Gym-Salaar</span>
+        </div>
+        <div class="preview-body">
+          <div class="preview-feature-grid">
+            <div class="preview-feature-card">
+              <em>EXPERIENCE</em>
+              <span>Engaging Fitness UI</span>
+            </div>
+            <div class="preview-feature-card">
+              <em>DESIGN</em>
+              <span>Modern Layout &amp; Styling</span>
+            </div>
+            <div class="preview-feature-card">
+              <em>RESPONSIVE</em>
+              <span>Multi-device Compatibility</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="tag-row" style="margin-top: 1.2rem;">
+        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Responsive Design</li>
+      </ul>
+      <div class="cta-row project-ctas">
+        <a class="btn btn-primary" href="https://abhinav1480.github.io/Gym-Salaar/" target="_blank" rel="noopener">VISIT WEBSITE →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 07 · CONTACT — board overview ── -->
+  <section id="contact" class="panel-section" data-index="6">
+    <div class="panel contact-panel reveal">
+      <p class="eyebrow"><span class="tick"></span>07 · CONTACT — BOARD OVERVIEW</p>
+      <h2>The channel<br>is open.</h2>
+      <p class="body-copy">
+        Have an opportunity, project or idea?<br>Send a signal.
+      </p>
+
+      <div class="whatsapp-wrapper">
+        <a class="btn btn-primary whatsapp-btn" id="whatsapp-link" href="https://wa.me/919392380501?text=Hi%20Abhinav!%20I%20came%20across%20your%20portfolio%20and%20really%20liked%20your%20work.%20I'd%20like%20to%20connect%20with%20you%20regarding%20an%20opportunity%2Fproject." target="_blank" rel="noopener noreferrer">WHATSAPP &rarr;</a>
+      </div>
+
+      <div class="contact-methods">
+        <a href="https://linkedin.com/in/abhinav-nakka-5133b1356/" target="_blank" rel="noopener noreferrer" class="contact-pill">
+          <span class="contact-pill-label">LINKEDIN</span>
+          <span class="contact-pill-val">abhinav-nakka-5133b1356</span>
+        </a>
+        <a href="https://github.com/Abhinav1480" target="_blank" rel="noopener noreferrer" class="contact-pill">
+          <span class="contact-pill-label">GITHUB</span>
+          <span class="contact-pill-val">github.com/Abhinav1480</span>
+        </a>
+        <a href="tel:+919392380501" class="contact-pill">
+          <span class="contact-pill-label">PHONE</span>
+          <span class="contact-pill-val">+91 9392380501</span>
+        </a>
+      </div>
+
+      <footer class="colophon">
+        <span>© 2026 ABHINAV · ALL SIGNALS RESERVED</span>
+        <span>RENDERED IN REAL TIME · WEBGL 2.0 · AX-01 REV A</span>
+      </footer>
+    </div>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script type="module" src="js/main.js"></script>
+<script defer src="js/ui.js"></script>
+</body>
+</html>
