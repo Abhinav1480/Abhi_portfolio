@@ -2,115 +2,75 @@
 
 <p align="center">
   <a href="https://abhi-portfolio-inky.vercel.app/">
-    <img src="https://img.shields.io/badge/Live%20Portfolio-Visit%20Website-e63946?style=for-the-badge" alt="Live Portfolio" />
+    <img src="https://img.shields.io/badge/LIVE%20DEMO-Visit%20Portfolio-e63946?style=for-the-badge" alt="Live Demo" />
   </a>
-  <a href="https://github.com/abhi96256">
-    <img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github" alt="GitHub Profile" />
+  <a href="https://github.com/Abhinav1480">
+    <img src="https://img.shields.io/badge/GitHub-Abhinav1480-181717?style=for-the-badge&logo=github" alt="GitHub" />
   </a>
 </p>
 
 <p align="center">
-  An interactive developer portfolio built to showcase projects, technical skills, creativity, and a passion for immersive web experiences.
+  A creative developer portfolio showcasing my work, projects, technical skills, and passion for building immersive digital experiences.
 </p>
 
 ---
 
-## ✨ About the Project
+## ✨ About
 
-This is my personal developer portfolio, designed to go beyond a traditional website. It combines modern web development with immersive 3D visuals, interactive elements, animations, and a distinctive digital experience.
+Welcome to my personal portfolio! This project represents my journey as a developer, combining creative design with interactive web experiences.
 
-The goal is to present my work and development journey in a memorable, engaging, and visually appealing way.
+My goal is to build digital experiences that go beyond traditional websites through thoughtful UI/UX, engaging animations, and a unique visual identity.
 
-## 🚀 Features
+## 🚀 Highlights
 
-- **Immersive 3D Experience** — Explore a visually rich portfolio environment.
-- **Interactive Elements** — Discover projects and content through engaging interactions.
-- **Smooth Animations** — Create fluid transitions and cinematic movement.
-- **Project Showcase** — Explore selected development projects.
-- **Modern UI/UX** — A custom-designed interface focused on visual quality.
-- **Responsive Design** — Designed with different screen sizes in mind.
-- **Performance Awareness** — Thoughtful rendering and animation optimization.
+- 🎨 Creative and modern visual design
+- 🖥️ Interactive portfolio experience
+- 🎬 Animated transitions and visual effects
+- 💼 Project showcase
+- 📱 Responsive user experience
+- ⚡ Focus on usability and performance
 
-## 🛠️ Tech Stack
+## 🌐 Live Website
 
-The project uses a modern web development stack, including technologies such as:
+**[Explore My Portfolio →](https://abhi-portfolio-inky.vercel.app/)**
 
-- React
-- JavaScript
-- Vite
-- Three.js / React Three Fiber
-- GSAP and ScrollTrigger
-- CSS / SCSS
+## 🛠️ Built With
 
-*The exact dependencies depend on the current project implementation.*
-
-## 🌐 Live Demo
-
-Explore the portfolio:
-
-**[abhi-portfolio-inky.vercel.app](https://abhi-portfolio-inky.vercel.app/)**
+This portfolio uses HTML, CSS, and JavaScript. Refer to the source code for the exact implementation and dependencies.
 
 ## 💻 Run Locally
 
-### Prerequisites
-
-- Node.js
-- npm
-- Git
-
-### Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/abhi96256/abhi-portfolio.git
-   ```
-
-2. Navigate into the project:
-
-   ```bash
-   cd abhi-portfolio
-   ```
-
-3. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-4. Start the development server:
-
-   ```bash
-   npm run dev
-   ```
-
-5. Open the local URL displayed in your terminal.
-
-### Production Build
+### 1. Clone the repository
 
 ```bash
-npm run build
+git clone https://github.com/Abhinav1480/Abhi_portfolio.git
 ```
 
-To preview the production build locally:
+### 2. Open the project folder
 
 ```bash
-npm run preview
+cd Abhi_portfolio
 ```
+
+### 3. Run the website
+
+Open `index.html` in your browser.
+
+Alternatively, use the Live Server extension in VS Code for local development.
 
 ## 👨‍💻 About Me
 
-I'm Abhinav, a Computer Science and Engineering student and full-stack developer passionate about building modern web applications, interactive user interfaces, and creative digital experiences.
+I'm Abhinav, a Computer Science and Engineering student and full-stack developer who enjoys creating modern web applications, interactive interfaces, and creative digital experiences.
 
-I enjoy exploring new technologies, experimenting with 3D web development, and turning ideas into functional projects.
+I'm always exploring new technologies, improving my development skills, and turning ideas into real projects.
 
 ## 🤝 Connect With Me
 
-- **Portfolio:** [Visit Website](https://abhi-portfolio-inky.vercel.app/)
-- **GitHub:** [@abhi96256](https://github.com/abhi96256)
+- **Portfolio:** [abhi-portfolio-inky.vercel.app](https://abhi-portfolio-inky.vercel.app/)
+- **GitHub:** [Abhinav1480](https://github.com/Abhinav1480)
 
 ---
 
 <p align="center">
-  Designed with creativity. Built with code. Always learning.
+  <i>Building ideas into experiences, one line of code at a time.</i>
 </p>
